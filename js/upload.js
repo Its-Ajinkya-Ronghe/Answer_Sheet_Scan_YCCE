@@ -51,7 +51,7 @@ submitBtn.addEventListener("click", async () => {
     try{
 
         const response = await fetch(
-            "http://localhost:5000/extract",
+            "https://answer-sheet-backend.onrender.com/extract",
             {
                 method:"POST",
                 body:formData
