@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Answer Sheet Scanner</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <img src="ycce_logo.jfif" alt="YCCE Logo" class="logo">
+
+        <h1>
+            YCCE MSE Answer Sheet Scanner
+            <br>
+            <span class="author">
+                by - Dr. Sushil S. Chavhan and Group
+            </span>
+        </h1>
+    </div>
+
+
+    <div class="preview-container">
+        <img id="previewImage" src="" alt="Image Preview">
+    </div>
+
+    <div class="buttons">
+
+        <input type="file"
+               id="galleryInput"
+               accept="image/*"
+               hidden>
+
+        <button id="galleryBtn">
+            Upload From Gallery
+        </button>
+
+        <input type="file"
+               id="cameraInput"
+               accept="image/*"
+               capture="environment"
+               hidden>
+
+        <button id="cameraBtn">
+            Open Camera
+        </button>
+
+        <button id="submitBtn">
+            Submit
+        </button>
+
+    </div>
+
+</div>
+
+<script src="js/upload.js"></script>
+
+</body>
+</html>
