@@ -56,6 +56,29 @@ h1{
     font-weight: normal;
 }
 
+table{
+
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+
+}
+
+th,
+td{
+
+    border:1px solid #ddd;
+    padding:10px;
+    text-align:center;
+
+}
+
+th{
+
+    background:#f2f2f2;
+
+}
+
 .buttons{
     margin-top:20px;
 
