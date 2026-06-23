@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Faculty Dashboard</h1>
+
+    <div class="card">
+
+        <h3>
+            Welcome Faculty
+        </h3>
+
+        <p>
+            Faculty ID:
+            <span id="facultyId"></span>
+        </p>
+
+    </div>
+
+    <label>
+        Session
+    </label>
+
+    <select id="session">
+
+        <option>
+            2025-2026
+        </option>
+
+        <option>
+            2024-2025
+        </option>
+
+        <option>
+            2023-2024
+        </option>
+
+    </select>
+
+    <br><br>
+
+    <label>
+        Subject
+    </label>
+
+    <select id="subject">
+
+        <option>
+            Machine Learning (22IT401)
+        </option>
+
+        <option>
+            Operating Systems (22IT402)
+        </option>
+
+        <option>
+            Computer Networks (22IT403)
+        </option>
+
+    </select>
+
+    <br><br>
+
+    <button id="scanBtn">
+        Scan Answer Sheet
+    </button>
+
+    <button id="downloadBtn">
+        Download Excel
+    </button>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>

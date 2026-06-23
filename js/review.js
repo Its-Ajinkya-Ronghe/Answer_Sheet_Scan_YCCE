@@ -39,6 +39,16 @@ saveBtn.addEventListener("click", async () => {
 
     try{
 
+        data.session =
+        localStorage.getItem(
+            "selectedSession"
+        );
+
+        data.subject =
+        localStorage.getItem(
+            "selectedSubject"
+        );
+
         const response = await fetch(
             "https://answer-sheet-backend.onrender.com/save",
             {
