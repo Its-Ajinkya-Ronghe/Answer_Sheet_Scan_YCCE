@@ -24,7 +24,7 @@ document
     );
 
     window.location.href =
-    "index.html";
+    "scanner.html";
 });
 
 document
