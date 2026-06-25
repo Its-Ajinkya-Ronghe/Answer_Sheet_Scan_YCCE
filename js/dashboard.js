@@ -32,17 +32,16 @@ document
 .addEventListener("click", () => {
 
     const session =
-    document.getElementById(
-        "session"
-    ).value;
+    document.getElementById("session").value;
 
     const subject =
-    document.getElementById(
-        "subject"
-    ).value;
+    document.getElementById("subject").value;
+
+    const courseCode =
+    subject.match(/\((.*?)\)/)[1];
 
     window.open(
-        `https://answer-sheet-backend.onrender.com/download-excel?session=${encodeURIComponent(session)}&subject=${encodeURIComponent(subject)}`
+        `https://answer-sheet-backend.onrender.com/download-excel?session=${encodeURIComponent(session)}&course_code=${encodeURIComponent(courseCode)}`
     );
 
 });

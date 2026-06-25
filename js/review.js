@@ -41,12 +41,12 @@ saveBtn.addEventListener("click", async () => {
 
         data.session =
         localStorage.getItem(
-            "selectedSession"
+        "selectedSession"
         );
 
-        data.subject =
+        data.course_code =
         localStorage.getItem(
-            "selectedSubject"
+        "selectedSubject"
         );
 
         const response = await fetch(
