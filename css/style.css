@@ -104,3 +104,587 @@ button{
     margin-bottom:10px;
 }
 
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+
+    background:linear-gradient(
+        135deg,
+        #003366,
+        #00509e
+    );
+
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+}
+
+.login-container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-card{
+
+    width:400px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.25);
+
+    text-align:center;
+}
+
+.logo{
+
+    width:110px;
+    height:110px;
+
+    object-fit:cover;
+
+    margin-bottom:15px;
+}
+
+.login-card h1{
+
+    color:#003366;
+    margin-bottom:10px;
+}
+
+.login-card h3{
+
+    color:#666;
+    margin-bottom:30px;
+}
+
+.login-card input{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-bottom:15px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+    box-sizing:border-box;
+}
+
+.login-card button{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#003366;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.login-card button:hover{
+
+    background:#00509e;
+}
+
+footer{
+
+    margin-top:25px;
+
+    color:white;
+
+    text-align:center;
+
+    font-size:14px;
+}
+
+footer p{
+
+    margin:4px;
+}
+
+.dashboard-container{
+
+    width:100%;
+    min-height:100vh;
+
+    padding:30px;
+
+    box-sizing:border-box;
+}
+
+.top-bar{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:20px 30px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+
+    margin-bottom:30px;
+}
+
+.college-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+}
+
+.logo{
+
+    width:80px;
+    height:80px;
+
+    border-radius:50%;
+}
+
+.college-info h2{
+
+    margin:0;
+    color:#003366;
+}
+
+.college-info p{
+
+    margin:5px 0 0 0;
+    color:#666;
+}
+
+.faculty-box{
+
+    background:#003366;
+
+    color:white;
+
+    padding:12px 20px;
+
+    border-radius:10px;
+
+    font-weight:bold;
+}
+
+.dashboard-card{
+
+    max-width:700px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.dashboard-card h1{
+
+    text-align:center;
+
+    color:#003366;
+
+    margin-bottom:10px;
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:#666;
+
+    margin-bottom:30px;
+}
+
+.dashboard-card label{
+
+    display:block;
+
+    margin-top:20px;
+
+    margin-bottom:8px;
+
+    font-weight:bold;
+
+    color:#003366;
+}
+
+.dashboard-card select{
+
+    width:100%;
+
+    padding:12px;
+
+    border-radius:8px;
+
+    border:1px solid #ccc;
+
+    font-size:16px;
+}
+
+.button-group{
+
+    margin-top:35px;
+
+    display:flex;
+
+    gap:15px;
+}
+
+.button-group button{
+
+    flex:1;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    background:#003366;
+
+    color:white;
+
+    transition:0.3s;
+}
+
+.button-group button:hover{
+
+    background:#00509e;
+}
+
+footer{
+
+    text-align:center;
+
+    color:white;
+
+    margin-top:20px;
+
+    padding-bottom:20px;
+}
+.scanner-page{
+
+    width:100%;
+    min-height:100vh;
+
+    padding:30px;
+
+    box-sizing:border-box;
+}
+
+.scanner-card{
+
+    max-width:900px;
+
+    margin:30px auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.15);
+}
+
+.scanner-card h1{
+
+    text-align:center;
+
+    color:#003366;
+
+    margin-bottom:10px;
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:#666;
+
+    margin-bottom:25px;
+}
+
+.preview-container{
+
+    width:100%;
+
+    height:500px;
+
+    border:3px dashed #003366;
+
+    border-radius:15px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    background:#f8f9fa;
+
+    margin-bottom:30px;
+
+    position:relative;
+}
+
+.preview-container img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+}
+
+.preview-placeholder{
+
+    position:absolute;
+
+    color:#888;
+
+    font-size:18px;
+}
+
+.buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+}
+
+.buttons button{
+
+    min-width:220px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#003366;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.buttons button:hover{
+
+    background:#00509e;
+
+    transform:translateY(-2px);
+}
+
+.review-page{
+
+    width:100%;
+    min-height:100vh;
+
+    padding:30px;
+
+    box-sizing:border-box;
+}
+
+.review-card{
+
+    max-width:1000px;
+
+    margin:30px auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.15);
+}
+
+.review-card h1{
+
+    text-align:center;
+
+    color:#003366;
+
+    margin-bottom:10px;
+}
+
+.review-card .subtitle{
+
+    text-align:center;
+
+    color:#666;
+
+    margin-bottom:30px;
+}
+
+#resultContainer{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:15px;
+
+    margin-bottom:30px;
+}
+
+.field{
+
+    background:#f8f9fa;
+
+    border-left:5px solid #003366;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    box-shadow:
+    0 2px 5px rgba(0,0,0,0.08);
+}
+
+.field strong{
+
+    color:#003366;
+
+    display:block;
+
+    margin-bottom:5px;
+}
+
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+}
+
+.buttons button{
+
+    min-width:220px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#003366;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.buttons button:hover{
+
+    background:#00509e;
+
+    transform:translateY(-2px);
+}
+.reviewTable,
+.marksTable{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-bottom:25px;
+}
+
+.reviewTable th,
+.reviewTable td,
+.marksTable th,
+.marksTable td{
+
+    border:1px solid #ddd;
+
+    padding:12px;
+
+    text-align:center;
+}
+
+.reviewTable th,
+.marksTable th{
+
+    background:#003366;
+
+    color:white;
+}
+
+.marksTable tr:nth-child(even){
+
+    background:#f5f5f5;
+}

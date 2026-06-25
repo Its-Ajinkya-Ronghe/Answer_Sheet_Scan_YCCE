@@ -1,81 +1,186 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dashboard</title>
+    <title>Faculty Dashboard</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<div class="container">
+<div class="dashboard-container">
 
-    <h1>Faculty Dashboard</h1>
+    <div class="top-bar">
 
-    <div class="card">
+        <div class="college-info">
 
-        <h3>
-            Welcome Faculty
-        </h3>
+            <img
+                src="ycce_logo.jfif"
+                alt="YCCE Logo"
+                class="logo"
+            >
 
-        <p>
+            <div>
+
+                <h2>
+                    YCCE Answer Sheet Scanner
+                </h2>
+
+                <p>
+                    Faculty Evaluation Dashboard
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="faculty-box">
+
             Faculty ID:
             <span id="facultyId"></span>
-        </p>
+
+        </div>
 
     </div>
 
-    <label>
-        Session
-    </label>
+    <div class="dashboard-card">
 
-    <select id="session">
+        <h1>
+            Faculty Dashboard
+        </h1>
 
-        <option>
-            2025-2026
-        </option>
+        <p class="subtitle">
+            Select Session and Subject to Continue
+        </p>
 
-        <option>
-            2024-2025
-        </option>
+        <label>
+            Academic Session
+        </label>
 
-        <option>
-            2023-2024
-        </option>
+        <select id="session">
 
-    </select>
+            <option>2025-2026</option>
+            <option>2024-2025</option>
+            <option>2023-2024</option>
+            <option>2022-2023</option>
+            <option>2021-2022</option>
+            <option>2020-2021</option>
+            <option>2019-2020</option>
+            <option>2018-2019</option>
 
-    <br><br>
+        </select>
 
-    <label>
-        Subject
-    </label>
+        <label>
+            Subject
+        </label>
 
-    <select id="subject">
+        <select id="subject">
 
-        <option>
-            Machine Learning (22IT401)
-        </option>
+    <option>
+        Machine Learning (22IT401)
+    </option>
 
-        <option>
-            Operating Systems (22IT402)
-        </option>
+    <option>
+        Operating Systems (22IT402)
+    </option>
 
-        <option>
-            Computer Networks (22IT403)
-        </option>
+    <option>
+        Computer Networks (22IT403)
+    </option>
 
-    </select>
+    <option>
+        Database Management Systems (22IT404)
+    </option>
 
-    <br><br>
+    <option>
+        Software Engineering (22IT405)
+    </option>
 
-    <button id="scanBtn">
-        Scan Answer Sheet
-    </button>
+    <option>
+        Artificial Intelligence (22IT406)
+    </option>
 
-    <button id="downloadBtn">
-        Download Excel
-    </button>
+    <option>
+        Data Mining and Warehousing (22IT407)
+    </option>
+
+    <option>
+        Cloud Computing (22IT408)
+    </option>
+
+    <option>
+        Cyber Security (22IT409)
+    </option>
+
+    <option>
+        Web Technology (22IT410)
+    </option>
+
+    <option>
+        Mobile Application Development (22IT411)
+    </option>
+
+    <option>
+        Compiler Design (22IT412)
+    </option>
+
+    <option>
+        Design and Analysis of Algorithms (22IT413)
+    </option>
+
+    <option>
+        Object Oriented Programming (22IT414)
+    </option>
+
+    <option>
+        Data Structures (22IT415)
+    </option>
+
+    <option>
+        Computer Graphics (22IT416)
+    </option>
+
+    <option>
+        Internet of Things (22IT417)
+    </option>
+
+    <option>
+        Blockchain Technology (22IT418)
+    </option>
+
+    <option>
+        Deep Learning (22IT419)
+    </option>
+
+    <option>
+        Natural Language Processing (22IT420)
+    </option>
+
+</select>
+
+        <div class="button-group">
+
+            <button id="backBtn">
+                ← Back
+            </button>
+
+            <button id="scanBtn">
+                📄 Scan Answer Sheet
+            </button>
+
+            <button id="downloadBtn">
+                📊 Download Excel
+            </button>
+
+        </div>
+
+    </div>
 
 </div>
+
+<footer>
+
+    © 2026 Yeshwantrao Chavan College of Engineering, Nagpur
+
+</footer>
 
 <script src="js/dashboard.js"></script>
 

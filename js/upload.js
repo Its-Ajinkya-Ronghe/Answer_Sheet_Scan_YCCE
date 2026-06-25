@@ -37,6 +37,16 @@ function handleImage(event){
     reader.readAsDataURL(selectedFile);
 }
 
+const backBtn =
+document.getElementById("backBtn");
+
+backBtn.addEventListener("click", () => {
+
+    window.location.href =
+    "dashboard.html";
+
+});
+
 submitBtn.addEventListener("click", async () => {
 
     if(!selectedFile){

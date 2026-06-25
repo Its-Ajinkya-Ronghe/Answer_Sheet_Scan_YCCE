@@ -27,6 +27,16 @@ document
     "scanner.html";
 });
 
+const backBtn =
+document.getElementById("backBtn");
+
+backBtn.addEventListener("click", () => {
+
+    window.location.href =
+    "login.html";
+
+});
+
 document
 .getElementById("downloadBtn")
 .addEventListener("click", () => {

@@ -1,23 +1,77 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Review Result</title>
+    <title>Review Extracted Data</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<div class="container">
+<div class="review-page">
 
-    <h1>Review Extracted Data</h1>
+    <div class="top-bar">
 
-    <div id="resultContainer"></div>
+        <div class="college-info">
 
-    <div class="buttons">
-        <button id="retryBtn">Retry</button>
-        <button id="saveBtn">Save</button>
+            <img
+                src="ycce_logo.jfif"
+                alt="YCCE Logo"
+                class="logo"
+            >
+
+            <div>
+
+                <h2>
+                    YCCE Answer Sheet Scanner
+                </h2>
+
+                <p>
+                    Review Extracted Student Data
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="review-card">
+
+        <h1>
+            Review Extracted Data
+        </h1>
+
+        <p class="subtitle">
+            Verify the extracted information before saving it to the database.
+        </p>
+
+        <div id="resultContainer"></div>
+
+        <div class="buttons">
+
+            <button id="backBtn">
+                ← Back
+            </button>
+
+
+            <button id="retryBtn">
+                🔄 Retry Scan
+            </button>
+
+            <button id="saveBtn">
+                💾 Save Result
+            </button>
+
+        </div>
+
     </div>
 
 </div>
+
+<footer>
+
+    © 2026 Yeshwantrao Chavan College of Engineering, Nagpur
+
+</footer>
 
 <script src="js/review.js"></script>
 
