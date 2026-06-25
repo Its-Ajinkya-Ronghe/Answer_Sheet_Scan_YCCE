@@ -7,6 +7,12 @@ document.getElementById("retryBtn");
 const saveBtn =
 document.getElementById("saveBtn");
 
+const backBtn =
+document.getElementById("backBtn");
+
+const loadingOverlay =
+document.getElementById("loadingOverlay");
+
 const data =
 JSON.parse(
     localStorage.getItem("extractedData")
@@ -97,17 +103,16 @@ if(data){
         </tr>
 
     </table>
+
     `;
 }
 
 retryBtn.addEventListener("click", () => {
 
-    window.location.href = "scanner.html";
+    window.location.href =
+    "scanner.html";
 
 });
-
-const backBtn =
-document.getElementById("backBtn");
 
 backBtn.addEventListener("click", () => {
 
@@ -120,14 +125,17 @@ saveBtn.addEventListener("click", async () => {
 
     try{
 
+        loadingOverlay.style.display =
+        "flex";
+
         data.session =
         localStorage.getItem(
-        "selectedSession"
+            "selectedSession"
         );
 
         data.course_code =
         localStorage.getItem(
-        "selectedSubject"
+            "selectedSubject"
         );
 
         const response = await fetch(
@@ -144,12 +152,21 @@ saveBtn.addEventListener("click", async () => {
         const result =
         await response.json();
 
+        loadingOverlay.style.display =
+        "none";
+
         alert(result.message);
+
+        window.location.href =
+        "dashboard.html";
 
     }
     catch(error){
 
         console.log(error);
+
+        loadingOverlay.style.display =
+        "none";
 
         alert("Save failed");
     }

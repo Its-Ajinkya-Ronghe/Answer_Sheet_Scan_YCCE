@@ -7,82 +7,126 @@ const cameraInput = document.getElementById("cameraInput");
 const previewImage = document.getElementById("previewImage");
 const submitBtn = document.getElementById("submitBtn");
 
-let selectedFile = null;
-
-galleryBtn.addEventListener("click", () => {
-    galleryInput.click();
-});
-
-cameraBtn.addEventListener("click", () => {
-    cameraInput.click();
-});
-
-galleryInput.addEventListener("change", handleImage);
-cameraInput.addEventListener("change", handleImage);
-
-function handleImage(event){
-
-    selectedFile = event.target.files[0];
-
-    if(!selectedFile){
-        return;
-    }
-
-    const reader = new FileReader();
-
-    reader.onload = function(e){
-        previewImage.src = e.target.result;
-    };
-
-    reader.readAsDataURL(selectedFile);
-}
+const loadingOverlay =
+document.getElementById("loadingOverlay");
 
 const backBtn =
 document.getElementById("backBtn");
 
-backBtn.addEventListener("click", () => {
+let selectedFile = null;
 
-    window.location.href =
-    "dashboard.html";
+galleryBtn.addEventListener("click", () => {
+
+    galleryInput.click();
 
 });
 
-submitBtn.addEventListener("click", async () => {
+cameraBtn.addEventListener("click", () => {
+
+    cameraInput.click();
+
+});
+
+galleryInput.addEventListener(
+    "change",
+    handleImage
+);
+
+cameraInput.addEventListener(
+    "change",
+    handleImage
+);
+
+function handleImage(event){
+
+    selectedFile =
+    event.target.files[0];
 
     if(!selectedFile){
-        alert("Please select image");
         return;
     }
 
-    const formData = new FormData();
+    const reader =
+    new FileReader();
 
-    formData.append("image", selectedFile);
+    reader.onload = function(e){
 
-    try{
+        previewImage.src =
+        e.target.result;
 
-        const response = await fetch(
-            "https://answer-sheet-backend.onrender.com/extract",
-            {
-                method:"POST",
-                body:formData
-            }
-        );
+    };
 
-        const result = await response.json();
+    reader.readAsDataURL(
+        selectedFile
+    );
+}
 
-        localStorage.setItem(
-            "extractedData",
-            JSON.stringify(result)
-        );
+backBtn.addEventListener(
+    "click",
+    () => {
 
-        window.location.href = "review.html";
+        window.location.href =
+        "dashboard.html";
 
     }
-    catch(error){
+);
 
-        console.log(error);
+submitBtn.addEventListener(
+    "click",
+    async () => {
 
-        alert("Extraction failed");
+        if(!selectedFile){
+
+            alert(
+                "Please select image"
+            );
+
+            return;
+        }
+
+        loadingOverlay.style.display =
+        "flex";
+
+        const formData =
+        new FormData();
+
+        formData.append(
+            "image",
+            selectedFile
+        );
+
+        try{
+
+            const response =
+            await fetch(
+                "https://answer-sheet-backend.onrender.com/extract",
+                {
+                    method:"POST",
+                    body:formData
+                }
+            );
+
+            const result =
+            await response.json();
+
+            localStorage.setItem(
+                "extractedData",
+                JSON.stringify(result)
+            );
+
+            window.location.href =
+            "review.html";
+        }
+        catch(error){
+
+            console.log(error);
+
+            loadingOverlay.style.display =
+            "none";
+
+            alert(
+                "Extraction failed"
+            );
+        }
     }
-
-});
+);
